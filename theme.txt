@@ -1,55 +1,49 @@
-#Main Configuration
-title-text: ""
-desktop-image: "background.png"
-desktop-color: "#000000"
+# Main GRUB theme configuration
+title-text: ""                   # No title text
+desktop-image: "background.png"  # Background image path
+desktop-color: "#000000"         # Default background color
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
-#Boot Menu
+# Boot Menu Styling
 + boot_menu {
   left = 8%
   top = 67%
   width = 63%
   height = 20%
+  align = "center"
   background = "rgba(0, 0, 0, 1)"
   border-radius = 8px
   padding = 15px
   box-shadow = "0 0 10px rgba(0, 0, 0, 0.8)"
   overflow-y = auto
 
-  # Menu Items
-  item {
-    font-size = 18px
-    color = "#475a6b"
-    padding = "10px 0"
-    cursor = pointer
-    transition = "all 0.3s ease-in-out"
-  }
+  # Menu Item Styling
+  item_color = "#475a6b"
+  item_font = "BankGothic"
+  item_height = 35
+  item_padding = 10
+  item_spacing = 3
 
-  item:hover,
-  item:selected {
-    background = "#a9c9ef"
-    color = "#000000"
-    border-radius = 4px
-  }
+  # Selected Menu Item
+  selected_item_color = "#a9c9ef"
+  selected_item_background = "rgba(255, 255, 255, 1)"
+  selected_item_border_radius = 4px
 
   # Scrollbar Styling
-  scrollbar-thumb {
-    background = "#475a6b"
-    border-radius = 10px
-  }
-
-  scrollbar-width = 8px
+  scrollbar_thumb = "#475a6b"
+  scrollbar_width = 8
 }
 
+# Timeout Label
 + label {
   left = 8%
   bottom = 5%
   align = "left"
-  text = "Default OS boots in 10 seconds..."
-  font-size = 14px
+  text = "Default OS boots in %d seconds..."
   color = "#475a6b"
+  font-size = 14
 }
