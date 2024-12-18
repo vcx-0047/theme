@@ -1,0 +1,55 @@
+#Main Configuration
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+#Boot Menu
++ boot_menu {
+  left = 8%
+  top = 67%
+  width = 63%
+  height = 20%
+  background = "rgba(0, 0, 0, 1)"
+  border-radius = 8px
+  padding = 15px
+  box-shadow = "0 0 10px rgba(0, 0, 0, 0.8)"
+  overflow-y = auto
+
+  # Menu Items
+  item {
+    font-size = 18px
+    color = "#475a6b"
+    padding = "10px 0"
+    cursor = pointer
+    transition = "all 0.3s ease-in-out"
+  }
+
+  item:hover,
+  item:selected {
+    background = "#a9c9ef"
+    color = "#000000"
+    border-radius = 4px
+  }
+
+  # Scrollbar Styling
+  scrollbar-thumb {
+    background = "#475a6b"
+    border-radius = 10px
+  }
+
+  scrollbar-width = 8px
+}
+
++ label {
+  left = 8%
+  bottom = 5%
+  align = "left"
+  text = "Default OS boots in 10 seconds..."
+  font-size = 14px
+  color = "#475a6b"
+}
